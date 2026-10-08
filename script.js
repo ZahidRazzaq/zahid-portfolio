@@ -1,8 +1,8 @@
 const revealItems = document.querySelectorAll('.reveal');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-if (reducedMotion) {
-  revealItems.forEach(el => el.classList.add('visible'));
+if (reducedMotion || !('IntersectionObserver' in window)) {
+  revealItems.forEach((el) => el.classList.add('visible'));
 } else {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -11,40 +11,56 @@ if (reducedMotion) {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.10, rootMargin: '0px 0px -30px 0px' });
 
-  revealItems.forEach(el => observer.observe(el));
+  revealItems.forEach((el) => observer.observe(el));
 }
 
-document.getElementById('year').textContent = new Date().getFullYear();
+const year = document.getElementById('year');
+if (year) year.textContent = new Date().getFullYear();
 
-// Small parallax effect on the research-orbit panel; disabled on touch/reduced-motion.
-const panel = document.querySelector('.hero-panel');
-if (panel && !reducedMotion && window.matchMedia('(pointer: fine)').matches) {
-  panel.addEventListener('mousemove', (event) => {
-    const r = panel.getBoundingClientRect();
-    const x = (event.clientX - r.left) / r.width - 0.5;
-    const y = (event.clientY - r.top) / r.height - 0.5;
-    panel.style.transform = `perspective(900px) rotateY(${x * 2.4}deg) rotateX(${y * -2.4}deg)`;
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.getElementById('primary-nav');
+
+if (menuToggle && nav) {
+  menuToggle.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+    menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
   });
-  panel.addEventListener('mouseleave', () => {
-    panel.style.transform = '';
+
+  nav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Open navigation');
+    });
   });
 }
-// Build the email address only when a visitor clicks a contact button.
-// This avoids exposing a plain mailto address directly in the HTML.
+
+function getEmailAddress() {
+  const user = ['Zahid', 'Razzaq'].join('.');
+  const domain = ['student', 'unibz', 'it'].join('.');
+  return `${user}@${domain}`;
+}
+
 document.querySelectorAll('.email-link').forEach((button) => {
-  button.addEventListener('click', (event) => {
-    if (button.getAttribute('href') === '#contact') {
-      return;
-    }
-
-    event.preventDefault();
-
-    const user = ['Zahid', 'Razzaq'].join('.');
-    const domain = ['student', 'unibz', 'it'].join('.');
-    const address = `${user}@${domain}`;
-
-    window.location.href = `mailto:${address}`;
+  button.addEventListener('click', () => {
+    window.location.href = `mailto:${getEmailAddress()}`;
   });
 });
+
+const copyButton = document.querySelector('.copy-email');
+if (copyButton) {
+  copyButton.addEventListener('click', async () => {
+    const address = getEmailAddress();
+    try {
+      await navigator.clipboard.writeText(address);
+      const original = copyButton.textContent;
+      copyButton.textContent = 'Copied';
+      setTimeout(() => { copyButton.textContent = original; }, 1600);
+    } catch {
+      window.prompt('Copy email address:', address);
+    }
+  });
+}
