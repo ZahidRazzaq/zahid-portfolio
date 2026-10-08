@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 320" role="img" aria-labelledby="title desc">
+  <title id="title">Gaze-aware action recognition experiments</title>
+  <desc id="desc">A conceptual gaze-aware recognition figure showing RGB video, gaze location and four tested integration strategies, with the best controlled input-level RGB plus gaze result improving the RGB baseline by approximately 1.5 percentage points.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#13263b"/>
+      <stop offset="1" stop-color="#091523"/>
+    </linearGradient>
+    <radialGradient id="gaze">
+      <stop offset="0" stop-color="#4fd1c5" stop-opacity="1"/>
+      <stop offset=".35" stop-color="#4fd1c5" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#4fd1c5" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="760" height="320" rx="28" fill="url(#bg)"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="34" y="40" fill="#9db0c6" font-size="13" letter-spacing="1.5">GAZE-AWARE MULTIMODAL RECOGNITION</text>
+    <text x="34" y="69" fill="#f3f7fb" font-size="22" font-weight="700">Where should the model look?</text>
+
+    <rect x="38" y="105" width="254" height="166" rx="18" fill="#0b1828" stroke="#ffffff" stroke-opacity=".11"/>
+    <rect x="58" y="127" width="214" height="104" rx="12" fill="#182a3c"/>
+    <path d="M78 209 L116 170 L153 193 L192 146 L252 208 Z" fill="#233d52"/>
+    <rect x="106" y="157" width="47" height="52" rx="7" fill="#314c61"/>
+    <circle cx="185" cy="165" r="49" fill="url(#gaze)"/>
+    <circle cx="185" cy="165" r="6" fill="#4fd1c5"/>
+    <circle cx="185" cy="165" r="16" fill="none" stroke="#4fd1c5" stroke-opacity=".7"/>
+    <text x="58" y="252" fill="#cbd7e3" font-size="12">RGB frame + gaze location</text>
+
+    <g font-size="11">
+      <text x="338" y="111" fill="#9db0c6" letter-spacing="1">TESTED INTEGRATION STRATEGIES</text>
+      <rect x="338" y="129" width="164" height="39" rx="11" fill="#11283a" stroke="#4fd1c5" stroke-opacity=".28"/>
+      <text x="355" y="154" fill="#f3f7fb">RGB + gaze input</text>
+      <rect x="518" y="129" width="164" height="39" rx="11" fill="#11283a"/>
+      <text x="535" y="154" fill="#f3f7fb">Explicit gaze marker</text>
+      <rect x="338" y="180" width="164" height="39" rx="11" fill="#11283a"/>
+      <text x="355" y="205" fill="#f3f7fb">Gaze-guided foveation</text>
+      <rect x="518" y="180" width="164" height="39" rx="11" fill="#11283a"/>
+      <text x="535" y="205" fill="#f3f7fb">Feature modulation</text>
+    </g>
+
+    <rect x="338" y="239" width="344" height="43" rx="12" fill="#0d1d30" stroke="#4fd1c5" stroke-opacity=".25"/>
+    <text x="354" y="257" fill="#9db0c6" font-size="10">BEST CONTROLLED OBSERVATION</text>
+    <text x="354" y="274" fill="#f3f7fb" font-size="13" font-weight="700">Input-level RGB + gaze  →  ~ +1.5 pp over RGB baseline</text>
+  </g>
+</svg>

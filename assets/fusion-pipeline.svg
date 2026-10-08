@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 320" role="img" aria-labelledby="title desc">
+  <title id="title">RGB and Depth action recognition fusion pipeline</title>
+  <desc id="desc">RGB and Depth inputs feed early, intermediate, late and hybrid fusion experiments using Swin3D and X3D, producing an action prediction.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10233a"/>
+      <stop offset="1" stop-color="#0a1626"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4fd1c5"/>
+      <stop offset="1" stop-color="#7aa2ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity=".22"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#7f94aa"/>
+    </marker>
+  </defs>
+  <rect width="760" height="320" rx="28" fill="url(#bg)"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="34" y="40" fill="#9db0c6" font-size="13" letter-spacing="1.5">MULTIMODAL VIDEO UNDERSTANDING</text>
+    <text x="34" y="69" fill="#f3f7fb" font-size="22" font-weight="700">RGB–Depth fusion benchmark</text>
+
+    <g filter="url(#shadow)">
+      <rect x="38" y="113" width="128" height="74" rx="16" fill="#122d3c" stroke="#4fd1c5" stroke-opacity=".55"/>
+      <circle cx="70" cy="150" r="12" fill="#4fd1c5" opacity=".9"/>
+      <text x="94" y="146" fill="#f3f7fb" font-size="16" font-weight="700">RGB</text>
+      <text x="94" y="165" fill="#9db0c6" font-size="11">video stream</text>
+
+      <rect x="38" y="205" width="128" height="74" rx="16" fill="#192842" stroke="#7aa2ff" stroke-opacity=".55"/>
+      <rect x="59" y="231" width="22" height="22" rx="5" fill="#7aa2ff" opacity=".9"/>
+      <text x="94" y="238" fill="#f3f7fb" font-size="16" font-weight="700">Depth</text>
+      <text x="94" y="257" fill="#9db0c6" font-size="11">video stream</text>
+
+      <rect x="248" y="111" width="220" height="168" rx="20" fill="#0d1d30" stroke="#ffffff" stroke-opacity=".11"/>
+      <text x="272" y="139" fill="#f3f7fb" font-size="14" font-weight="700">Fusion strategies</text>
+      <g font-size="12" fill="#c9d6e4">
+        <rect x="272" y="158" width="78" height="34" rx="10" fill="#14293c"/><text x="289" y="180">Early</text>
+        <rect x="360" y="158" width="84" height="34" rx="10" fill="#14293c"/><text x="372" y="180">Intermediate</text>
+        <rect x="272" y="203" width="78" height="34" rx="10" fill="#14293c"/><text x="289" y="225">Late</text>
+        <rect x="360" y="203" width="84" height="34" rx="10" fill="#14293c"/><text x="378" y="225">Hybrid</text>
+      </g>
+      <text x="272" y="260" fill="#7f94aa" font-size="11">Controlled comparison under one protocol</text>
+
+      <rect x="548" y="128" width="170" height="136" rx="20" fill="#0d1d30" stroke="#ffffff" stroke-opacity=".11"/>
+      <text x="572" y="158" fill="#9db0c6" font-size="11">VIDEO BACKBONES</text>
+      <text x="572" y="186" fill="#f3f7fb" font-size="17" font-weight="700">Swin3D · X3D</text>
+      <rect x="572" y="207" width="120" height="30" rx="10" fill="url(#accent)" opacity=".9"/>
+      <text x="590" y="227" fill="#06111c" font-size="12" font-weight="700">Action prediction</text>
+    </g>
+
+    <path d="M166 150 C205 150 210 168 248 168" fill="none" stroke="#7f94aa" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M166 241 C205 241 210 222 248 222" fill="none" stroke="#7f94aa" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M468 194 C505 194 515 194 548 194" fill="none" stroke="#7f94aa" stroke-width="2" marker-end="url(#arrow)"/>
+  </g>
+</svg>

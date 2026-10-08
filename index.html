@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Zahid Razzaq — Computer Vision Research Engineer working on video understanding, multimodal learning, human activity recognition, and human-robot interaction." />
+  <title>Zahid Razzaq | Computer Vision Research Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Home">ZR<span>.</span></a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#research">Research</a>
+      <a href="#experience">Experience</a>
+      <a href="#publications">Publications</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta email-link" href="#contact">Contact</a>
+  </header>
+
+  <main id="top">
+    <section class="hero section-shell">
+      <div class="hero-copy reveal slide-left">
+        <div class="eyebrow">Computer Vision Research Engineer</div>
+        <h1>Multimodal AI for understanding <span class="gradient-text">human activity</span>.</h1>
+        <p class="hero-text">
+          Doctoral researcher in Robotics and Intelligent Machines working on video understanding,
+          fine-grained action recognition, multimodal learning, and human-robot interaction.
+          I build Python/PyTorch research pipelines for RGB, Depth, gaze, and egocentric visual data.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#research">Explore research</a>
+          <button class="button button-secondary email-link" type="button">
+            Discuss collaboration
+          </button>
+        </div>
+        <div class="hero-links">
+          <a href="https://github.com/ZahidRazzaq" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <span>Bolzano, Italy</span>
+          <span>Open to research &amp; R&amp;D roles</span>
+        </div>
+      </div>
+
+      <div class="hero-panel reveal slide-right" aria-label="Research profile snapshot">
+        <div class="signal-grid">
+          <div class="signal-card">
+            <span class="signal-label">Core modalities</span>
+            <strong>RGB · Depth · Gaze</strong>
+          </div>
+          <div class="signal-card">
+            <span class="signal-label">Research stack</span>
+            <strong>Python · PyTorch · OpenCV</strong>
+          </div>
+          <div class="signal-card">
+            <span class="signal-label">Video models</span>
+            <strong>Swin3D · X3D</strong>
+          </div>
+          <div class="signal-card">
+            <span class="signal-label">Human sensing</span>
+            <strong>Project Aria · EEG</strong>
+          </div>
+        </div>
+        <div class="orbit" aria-hidden="true">
+          <div class="orbit-ring orbit-ring-1"></div>
+          <div class="orbit-ring orbit-ring-2"></div>
+          <div class="orbit-core">HRC</div>
+          <span class="orbit-tag tag-rgb">RGB</span>
+          <span class="orbit-tag tag-depth">Depth</span>
+          <span class="orbit-tag tag-gaze">Gaze</span>
+          <span class="orbit-tag tag-eeg">EEG</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats section-shell reveal">
+      <div class="stat"><strong>24+</strong><span>human participants in multimodal recording</span></div>
+      <div class="stat"><strong>5</strong><span>published / accepted research papers</span></div>
+      <div class="stat"><strong>4</strong><span>fusion families benchmarked</span></div>
+      <div class="stat"><strong>2</strong><span>research domains: vision + brain–robot control</span></div>
+    </section>
+
+    <section id="research" class="section section-shell">
+      <div class="section-heading reveal slide-left">
+        <span class="kicker">Selected research</span>
+        <h2>Projects built around real multimodal data.</h2>
+        <p>Focused on evidence, controlled comparisons, reproducibility, and clear failure analysis.</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card reveal slide-up">
+          <div class="project-index">01</div>
+          <div class="project-tags"><span>Action Recognition</span><span>RGB–Depth</span></div>
+          <figure class="project-visual">
+            <img src="assets/fusion-pipeline.svg" alt="Diagram of the RGB and Depth fusion benchmark using early, intermediate, late and hybrid fusion with Swin3D and X3D." loading="lazy" />
+          </figure>
+          <h3>Procedural Video Understanding</h3>
+          <p>
+            Built a unified benchmark for early, intermediate, late, and hybrid RGB–Depth fusion
+            using Video Swin Transformer/Swin3D and X3D under a consistent evaluation protocol.
+          </p>
+          <ul>
+            <li>Fine-grained assembly/disassembly recognition</li>
+            <li>Accuracy–complexity analysis with latency, GFLOPs and parameters</li>
+            <li>Accepted IC2IE 2026 paper</li>
+          </ul>
+        </article>
+
+        <article class="project-card featured reveal slide-up">
+          <div class="project-index">02</div>
+          <div class="project-tags"><span>Gaze</span><span>Egocentric Vision</span></div>
+          <figure class="project-visual">
+            <img src="assets/gaze-aware.svg" alt="Concept diagram of gaze-aware action-recognition experiments and the approximately 1.5 percentage-point improvement of the best controlled RGB plus gaze input configuration." loading="lazy" />
+          </figure>
+          <h3>Gaze-Aware Multimodal Recognition</h3>
+          <p>
+            Studied whether gaze can improve action recognition through direct RGB+gaze integration,
+            gaze markers, foveation, and feature-level modulation.
+          </p>
+          <ul>
+            <li>Approximately +1.5 percentage points over the controlled RGB baseline</li>
+            <li>Controlled ablations including negative and overfitting variants</li>
+            <li>Designed for human-aware perception in HRC</li>
+          </ul>
+        </article>
+
+        <article class="project-card reveal slide-up">
+          <div class="project-index">03</div>
+          <div class="project-tags"><span>Project Aria</span><span>Data Pipeline</span></div>
+          <figure class="project-visual">
+            <img src="assets/aria-pipeline.svg" alt="Diagram of the multimodal human-participant data pipeline from Project Aria and fixed cameras to RGB, Depth, gaze, temporal annotation and model-ready data." loading="lazy" />
+          </figure>
+          <h3>Multimodal Human-Participant Dataset</h3>
+          <p>
+            Designed and conducted a participant-based assembly/disassembly recording study using
+            Meta Project Aria and two fixed-view cameras.
+          </p>
+          <ul>
+            <li>Participant instructions, ethics/consent and data-quality monitoring</li>
+            <li>RGB, Depth and gaze-oriented data preparation</li>
+            <li>Reusable temporal annotation and timestamp-mapping workflow</li>
+          </ul>
+        </article>
+
+        <article class="project-card reveal slide-up">
+          <div class="project-index">04</div>
+          <div class="project-tags"><span>EEG</span><span>Shared Control</span></div>
+          <h3>Brain-Controlled Mobile Robot</h3>
+          <p>
+            Developed EEG-driven shared-control methods in MATLAB/Simulink, combining SVM intention
+            classification with fuzzy and self-learning neuro-fuzzy safety control.
+          </p>
+          <ul>
+            <li>Human-in-the-loop EEG acquisition and classification</li>
+            <li>Intention tracking and obstacle-avoidance control</li>
+            <li>Simulation-based evaluation</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="section section-shell split-section">
+      <div class="section-heading sticky-heading reveal slide-left">
+        <span class="kicker">Experience</span>
+        <h2>Research across vision, multimodal sensing and HRI.</h2>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item reveal slide-right">
+          <div class="timeline-dot"></div>
+          <span class="timeline-org">University of Genoa / Free University of Bozen–Bolzano</span>
+          <h3>Doctoral Researcher — Robotics and Intelligent Machines</h3>
+          <p>
+            Develops multimodal action-recognition methods and reproducible video-learning pipelines for
+            procedural assembly/disassembly using RGB, Depth and gaze.
+          </p>
+          <div class="chip-row">
+            <span>PyTorch</span><span>Swin3D</span><span>X3D</span><span>Project Aria</span><span>HRC</span>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal slide-right">
+          <div class="timeline-dot"></div>
+          <span class="timeline-org">Beijing Institute of Technology, China</span>
+          <h3>Graduate Researcher — Brain–Robot Interfaces</h3>
+          <p>
+            Worked on EEG intention classification and shared control for a simulated brain-controlled mobile robot,
+            integrating machine-learning commands with autonomous safety logic.
+          </p>
+          <div class="chip-row">
+            <span>EEG</span><span>SVM</span><span>MATLAB/Simulink</span><span>Fuzzy Control</span>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal slide-right">
+          <div class="timeline-dot"></div>
+          <span class="timeline-org">Chenab College of Engineering and Technology, Pakistan</span>
+          <h3>Lecturer</h3>
+          <p>
+            Taught engineering courses and supervised laboratory and project-based work, supporting students in
+            implementation, experimentation, and technical problem solving.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="publications" class="section section-shell">
+      <div class="section-heading reveal slide-left">
+        <span class="kicker">Publications</span>
+        <h2>Selected research output.</h2>
+      </div>
+      <div class="publication-list">
+        <article class="publication reveal slide-up">
+          <span class="pub-year">2026</span>
+          <div><strong>A Comparative Evaluation of RGB–Depth Fusion for Egocentric Assembly Action Recognition</strong><p>Z. Razzaq et al. · Accepted for presentation at IC2IE 2026.</p></div>
+        </article>
+        <article class="publication reveal slide-up">
+          <span class="pub-year">2024</span>
+          <div><strong>Intelligent Control System for Brain-Controlled Mobile Robot Using Self-Learning Neuro-Fuzzy Approach</strong><p>Z. Razzaq, N. Brahimi, H. Z. Ur Rehman, Z. H. Khan · <em>Sensors</em>, 24(18), 5875.</p></div>
+        </article>
+        <article class="publication reveal slide-up">
+          <span class="pub-year">2020</span>
+          <div><strong>Fuzzy-Based Shared Control for Brain-Controlled Mobile Robot</strong><p>Z. Razzaq and L. Bi · 39th Chinese Control Conference, pp. 3759–3764.</p></div>
+        </article>
+        <article class="publication secondary reveal slide-up">
+          <span class="pub-year">2025</span>
+          <div><strong>Explainable Spatio-Temporal Inference Network for Car-Sharing Demand Prediction</strong><p>N. Brahimi, H. Zhang, Z. Razzaq · <em>ISPRS International Journal of Geo-Information</em>, 14(4), 163.</p></div>
+        </article>
+        <article class="publication secondary reveal slide-up">
+          <span class="pub-year">2025</span>
+          <div><strong>Quantum-Inspired Spatio-Temporal Inference Network for Sustainable Car-Sharing Demand Prediction</strong><p>N. Brahimi, H. Zhang, Z. Razzaq · <em>Sustainability</em>, 17(11), 4987.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="education" class="section section-shell">
+      <div class="section-heading reveal slide-left">
+        <span class="kicker">Education</span>
+        <h2>Robotics, mechatronics and control.</h2>
+      </div>
+      <div class="education-grid">
+        <article class="education-card reveal slide-up">
+          <span class="degree">PhD Programme</span>
+          <h3>Robotics and Intelligent Machines</h3>
+          <p>University of Genoa, Italy</p>
+          <small>Research hosted at the Free University of Bozen–Bolzano. Focus: multimodal action recognition, egocentric video understanding and HRC.</small>
+        </article>
+        <article class="education-card reveal slide-up">
+          <span class="degree">MSc</span>
+          <h3>Mechatronics and Control Engineering</h3>
+          <p>University of Engineering and Technology Lahore, Pakistan</p>
+          <small>Advanced robotics, AI, industrial automation, sensing, signal processing and control systems.</small>
+        </article>
+        <article class="education-card reveal slide-up">
+          <span class="degree">BSc</span>
+          <h3>Mechatronics and Control Engineering</h3>
+          <p>University of Engineering and Technology Lahore, Pakistan</p>
+          <small>Machine vision, automation, robotics design, DSP, embedded systems and mechatronic system design.</small>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-shell">
+      <div class="section-heading reveal slide-left">
+        <span class="kicker">Technical profile</span>
+        <h2>Research implementation, not buzzwords.</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-group reveal slide-up"><h3>Programming</h3><p>Python · PyTorch · Torchvision · NumPy · pandas · OpenCV · Scikit-learn · TensorFlow/Keras · MATLAB/Simulink</p></div>
+        <div class="skill-group reveal slide-up"><h3>Computer Vision</h3><p>Video understanding · action recognition · egocentric vision · RGB–Depth learning · preprocessing · temporal annotation</p></div>
+        <div class="skill-group reveal slide-up"><h3>Multimodal Learning</h3><p>Early / intermediate / late / hybrid fusion · gaze heatmaps · gaze-guided foveation · feature modulation</p></div>
+        <div class="skill-group reveal slide-up"><h3>Experimentation</h3><p>Human-participant data acquisition · ethics/consent · synchronization support · quality validation · ablations · reproducible evaluation</p></div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section-shell reveal">
+      <div>
+        <span class="kicker">Contact</span>
+        <h2>Interested in applied research, research engineering, or collaboration?</h2>
+        <p>I am open to roles and collaborations in computer vision, multimodal learning, video understanding, human activity recognition and HRI.</p>
+      </div>
+      <div class="contact-actions">
+        <button class="button button-primary email-link" type="button">
+          Email me
+        </button>
+        <a class="button button-secondary" href="https://github.com/ZahidRazzaq" target="_blank" rel="noreferrer">GitHub profile ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer section-shell">
+    <span>© <span id="year"></span> Zahid Razzaq</span>
+    <span>Computer Vision · Multimodal AI · Human–Robot Interaction</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
